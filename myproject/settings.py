@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9_yh+$)@-^c=b7fen5_7de4vet5l^454b3fdnh3a+*-%iw8n0l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,14 +75,12 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'myproject',
-        'HOST':'DESKTOP-9C5QL7E\\SQLEXPRESS01',
-        'OPTIONS':{
-            'driver':'ODBC Driver 17 for SQL Server'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+    
+
 
 
 # Password validation
